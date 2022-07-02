@@ -9,24 +9,58 @@
 
 body {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: #b7b7b7;
+    background-color: #f5f5f5;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif, 'Times New Roman', Times, serif;
 }
 
+#title {
+    color: black;
+    opacity: 0.75;
+    text-align: center;
+    font-size: 54px;
+    margin: 32px;
+}
+
+.buttons-and-grid {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+button {
+    background-color: #1F2937;
+    border: 2px solid #b7b7b7;
+    padding: 8px 24px;
+    margin: 16px;
+    border-radius: 8px;
+    transition: 0.5s;
+    color: #f5f5f5;
+
+}
+
+button:hover {
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+  }
+
 .grid-container {
-    width: 960px;
-    height: 960px;
+    width: 750px;
+    height: 750px;
     display: flex;
     flex-direction: column;
 }
 
 
 #whatever {
-    border: none;
-    border: 2px solid red;
-
+    box-shadow: 10px 10px 8px #888888;
 }
 
 .row {
@@ -41,6 +75,14 @@ body {
     background-color: #b7b7b7;
 }
 
-/* .gridsquare:hover {
-    background-color: aqua;
-} */
+#clear {
+    font-weight: 800;
+}
+
+#rainbow {
+    font-weight: 800;
+}
+
+#change-size {
+    font-weight: 800;
+}
