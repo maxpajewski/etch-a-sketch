@@ -1,7 +1,7 @@
 *,
 *::after,
 *::before {
-  box-sizing: border-box;
+  /* box-sizing: border-box;  */
   margin: 0;
 }
 
@@ -18,4 +18,29 @@ body {
 .grid-container {
     width: 960px;
     height: 960px;
+    display: flex;
+    flex-direction: column;
 }
+
+
+#whatever {
+    border: none;
+    border: 2px solid red;
+
+}
+
+.row {
+    height: 80px;
+    display: flex;
+    flex-direction: row;
+}
+
+.gridsquare {
+    height: 80px; 
+    width: 80px;
+    background-color: #b7b7b7;
+}
+
+/* .gridsquare:hover {
+    background-color: aqua;
+} */
