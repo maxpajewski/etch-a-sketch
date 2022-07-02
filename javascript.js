@@ -1,5 +1,7 @@
+let gridSize = 16;
+
 addGrid();
-createGrid(16);
+createGrid(gridSize);
 createBrush();
 
 function createBrush() {
@@ -27,18 +29,19 @@ buttons.forEach((button) => {
 })
 
 
-function createGrid(size) {
-    for(let i = 0; i < size; i++) {
+function createGrid(size1) {
+    for(let i = 0; i < size1; i++) {
         let row = document.createElement('div');
         row.className = 'row'; 
-        for(let j = 0; j < size; j++) {
+        for(let j = 0; j < size1; j++) {
             let cell = document.createElement('div');
             cell.className = 'gridsquare';
             row.appendChild(cell);
         }
         document.getElementById('whatever').appendChild(row);
     }
-    changeHeight(size);
+    changeHeight(size1);
+    gridSize = size1; 
 }
 
 function changeHeight(size) {
@@ -51,6 +54,7 @@ function changeHeight(size) {
     let changeCell = document.getElementsByClassName('gridsquare'); 
     for(let j = 0; j < changeCell.length; j++) {
         changeCell[j].style.height = heightWidth + 'px'; 
+        changeCell[j].style.width = heightWidth + 'px';
     }
 }
 
@@ -58,11 +62,10 @@ function changeSize() {
     let size = prompt('Enter the size grid you would like: (Max 100)');
     let elem = document.getElementById('whatever');
     elem.remove();
-    console.log('removed grid');
     addGrid();
-    console.log('added new grid');
     createGrid(size);
     createBrush();
+    gridSize = size;
 }
 
 function addGrid() {
@@ -71,6 +74,14 @@ function addGrid() {
     grid.classList.add('grid-container');
     grid.setAttribute('id', 'whatever');
     addGrid.appendChild(grid);
+}
+
+function clearGrid() {
+    let elem = document.getElementById('whatever');
+    elem.remove();
+    addGrid();
+    createGrid(gridSize);
+    createBrush();
 }
 
 

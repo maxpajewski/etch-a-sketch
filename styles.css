@@ -22,6 +22,7 @@ body {
     text-align: center;
     font-size: 54px;
     margin: 32px;
+    font-weight: 800;
 }
 
 .buttons-and-grid {
@@ -33,7 +34,8 @@ body {
 .buttons {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: center;
+    gap: 32px;
 }
 
 button {
