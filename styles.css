@@ -58,6 +58,7 @@ button:hover {
     height: 750px;
     display: flex;
     flex-direction: column;
+    margin-bottom: 32px;
 }
 
 
